@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui/features/loginpage/widgets/title.dart';
 
 class Maindesign extends StatefulWidget {
   const Maindesign({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _Home();
   }
 }
@@ -13,7 +13,15 @@ class Maindesign extends StatefulWidget {
 class _Home extends State<Maindesign> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            margin: EdgeInsets.only(top: 150, left: 40),
+            child: Form(child: Column(children: [TitleWidget()])),
+          ),
+        ),
+      ),
+    );
   }
 }
