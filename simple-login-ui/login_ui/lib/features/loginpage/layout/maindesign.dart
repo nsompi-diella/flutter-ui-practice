@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui/features/loginpage/widgets/submitted_button.dart';
 import 'package:login_ui/features/loginpage/widgets/title.dart';
 
 class Maindesign extends StatefulWidget {
@@ -18,7 +19,9 @@ class _Home extends State<Maindesign> {
         child: SingleChildScrollView(
           child: Container(
             margin: EdgeInsets.only(top: 150, left: 40),
-            child: Form(child: Column(children: [TitleWidget()])),
+            child: Form(
+              child: Column(children: [TitleWidget(), SubmittedButton()]),
+            ),
           ),
         ),
       ),
