@@ -20,7 +20,10 @@ class _Home extends State<Maindesign> {
           child: Container(
             margin: EdgeInsets.only(top: 150, left: 40),
             child: Form(
-              child: Column(children: [TitleWidget(), SubmittedButton()]),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [TitleWidget(), SubmittedButton()],
+              ),
             ),
           ),
         ),

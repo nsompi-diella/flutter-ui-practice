@@ -14,13 +14,16 @@ class _Home extends State<SubmittedButton> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width:350,
-      height:50,
-      child:ElevatedButton(
-        style:ElevatedButton.styleFrom(
-          backgroundColor:Colors.blueAccent
+      width: 350,
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
+        onPressed: () {},
+        child: Text(
+          'Login',
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
-        onPressed: (){}, child:Text('Login',style:TextStyle(fontWeight:FontWeight.bold),)),
+      ),
     );
   }
 }
