@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui/core/validation/validationform.dart';
 
 class Formvalidation extends StatefulWidget {
   const Formvalidation({super.key});
@@ -20,6 +21,7 @@ class _Home extends State<Formvalidation> {
         SizedBox(
           width: 350,
           child: TextFormField(
+            validator:Validationform.email,
             cursorColor: Colors.black,
             decoration: InputDecoration(
               hint: Padding(
@@ -66,6 +68,7 @@ class _Home extends State<Formvalidation> {
         SizedBox(
           width: 350,
           child: TextFormField(
+            validator:Validationform.password,
             cursorColor: Colors.grey,
             decoration: InputDecoration(
               suffixIcon: IconButton(
