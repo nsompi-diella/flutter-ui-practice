@@ -17,7 +17,9 @@ class _Home extends State<SubmittedButton> {
       width: 350,
       height: 50,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.blueAccent.shade700,
+        ),
         onPressed: () {},
         child: Text(
           'Login',
