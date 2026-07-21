@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_ui/features/loginpage/widgets/formValidation.dart';
 import 'package:login_ui/features/loginpage/widgets/submitted_button.dart';
+import 'package:login_ui/features/loginpage/widgets/submitted_email_button.dart';
 import 'package:login_ui/features/loginpage/widgets/title.dart';
 
 class Maindesign extends StatefulWidget {
@@ -28,6 +29,8 @@ class _Home extends State<Maindesign> {
                 Formvalidation(),
                 SizedBox(height: 40),
                 SubmittedButton(),
+                SizedBox(height: 30),
+                SubmittedEmailButton(),
               ],
             ),
           ),
