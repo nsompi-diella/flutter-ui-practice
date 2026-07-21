@@ -53,14 +53,19 @@ class _Home extends State<Formvalidation> {
                 ),
               ),
 
-              TextButton(onPressed: () {}, child: Text('Forgot Password?')),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Forgot Password?',
+                  style: TextStyle(color: Colors.blueAccent.shade700),
+                ),
+              ),
             ],
           ),
         ),
         SizedBox(
           width: 350,
           child: TextFormField(
-             
             cursorColor: Colors.grey,
             decoration: InputDecoration(
               suffixIcon: IconButton(
