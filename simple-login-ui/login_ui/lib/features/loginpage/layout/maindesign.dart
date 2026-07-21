@@ -21,7 +21,7 @@ class _Home extends State<Maindesign> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            margin: EdgeInsets.only(top: 150, left: 40),
+            margin: EdgeInsets.only(top: 100, left: 40),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -32,7 +32,7 @@ class _Home extends State<Maindesign> {
                 SubmittedButton(),
                 SizedBox(height: 30),
                 TextSignup(),
-                SizedBox(height:30,),
+                SizedBox(height: 30),
                 SubmittedEmailButton(),
               ],
             ),
