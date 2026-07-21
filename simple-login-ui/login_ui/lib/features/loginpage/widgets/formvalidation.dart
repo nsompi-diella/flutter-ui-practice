@@ -5,7 +5,6 @@ class Formvalidation extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _Home();
   }
 }
@@ -16,10 +15,7 @@ class _Home extends State<Formvalidation> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Email Address',
-          style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.5),
-        ),
+        Text('Email Address', style: TextStyle(fontWeight: FontWeight.bold)),
         SizedBox(height: 10),
         SizedBox(
           width: 350,
@@ -30,7 +26,7 @@ class _Home extends State<Formvalidation> {
                 padding: EdgeInsets.only(left: 10),
                 child: Text(
                   'hello@example.com',
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Colors.grey, fontSize: 13),
                 ),
               ),
               focusedBorder: OutlineInputBorder(
@@ -49,7 +45,13 @@ class _Home extends State<Formvalidation> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Password'),
+              Text(
+                'Password',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
 
               TextButton(onPressed: () {}, child: Text('Forgot Password?')),
             ],
@@ -58,14 +60,18 @@ class _Home extends State<Formvalidation> {
         SizedBox(
           width: 350,
           child: TextFormField(
+             
             cursorColor: Colors.grey,
             decoration: InputDecoration(
-              suffixIcon: Icon(Icons.remove_red_eye, color: Colors.grey),
+              suffixIcon: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.remove_red_eye, color: Colors.grey),
+              ),
               hint: Padding(
                 padding: EdgeInsets.only(left: 10),
                 child: Text(
                   '***************',
-                  style: TextStyle(color: Colors.grey, fontSize: 12),
+                  style: TextStyle(color: Colors.grey, fontSize: 13),
                 ),
               ),
               focusedBorder: OutlineInputBorder(
