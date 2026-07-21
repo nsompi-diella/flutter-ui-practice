@@ -32,7 +32,7 @@ class _Home extends State<Maindesign> {
                 SubmittedButton(),
                 SizedBox(height: 30),
                 TextSignup(),
-                SizedBox(height: 30),
+                SizedBox(height:30,),
                 SubmittedEmailButton(),
               ],
             ),

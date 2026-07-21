@@ -7,15 +7,16 @@ class TextSignup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: const [
-        Expanded(child: Divider(thickness: 1, color: Colors.grey)),
+        Flexible(flex: 2, child: Divider()),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 12),
           child: Text(
-            'or sign in with',
-            style: TextStyle(color: Colors.grey, fontSize: 14),
+            "or sign in with",
+            style: TextStyle(color: Colors.grey, fontSize: 13),
           ),
         ),
-        Expanded(child: Divider(thickness: 1, color: Colors.grey)),
+        Flexible(flex: 2, child: Divider()),
+        SizedBox(width: 20),
       ],
     );
   }
