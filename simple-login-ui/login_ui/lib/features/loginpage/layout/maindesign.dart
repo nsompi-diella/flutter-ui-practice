@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui/features/loginpage/widgets/formValidation.dart';
 import 'package:login_ui/features/loginpage/widgets/submitted_button.dart';
 import 'package:login_ui/features/loginpage/widgets/title.dart';
 
@@ -19,11 +20,15 @@ class _Home extends State<Maindesign> {
         child: SingleChildScrollView(
           child: Container(
             margin: EdgeInsets.only(top: 150, left: 40),
-            child: Form(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [TitleWidget(), SubmittedButton()],
-              ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TitleWidget(),
+                SizedBox(height: 20),
+                Formvalidation(),
+                SizedBox(height: 40),
+                SubmittedButton(),
+              ],
             ),
           ),
         ),
