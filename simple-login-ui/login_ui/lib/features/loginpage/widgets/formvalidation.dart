@@ -21,7 +21,7 @@ class _Home extends State<Formvalidation> {
         SizedBox(
           width: 350,
           child: TextFormField(
-            validator:Validationform.email,
+            validator: Validationform.email,
             cursorColor: Colors.black,
             decoration: InputDecoration(
               hint: Padding(
@@ -36,6 +36,10 @@ class _Home extends State<Formvalidation> {
                 borderSide: BorderSide(color: Colors.black),
               ),
               enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide(color: Colors.grey.shade400),
+              ),
+              border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide(color: Colors.grey.shade400),
               ),
@@ -68,7 +72,7 @@ class _Home extends State<Formvalidation> {
         SizedBox(
           width: 350,
           child: TextFormField(
-            validator:Validationform.password,
+            validator: Validationform.password,
             cursorColor: Colors.grey,
             decoration: InputDecoration(
               suffixIcon: IconButton(
@@ -87,6 +91,10 @@ class _Home extends State<Formvalidation> {
                 borderSide: BorderSide(color: Colors.black),
               ),
               enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide(color: Colors.grey.shade400),
+              ),
+              border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide(color: Colors.grey.shade400),
               ),
