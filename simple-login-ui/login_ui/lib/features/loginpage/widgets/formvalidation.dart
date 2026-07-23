@@ -10,6 +10,7 @@ class Formvalidation extends StatefulWidget {
   }
 }
 
+
 class _Home extends State<Formvalidation> {
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class _Home extends State<Formvalidation> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide(color: Colors.grey.shade400),
-              ),
+              ), 
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide(color: Colors.grey.shade400),
