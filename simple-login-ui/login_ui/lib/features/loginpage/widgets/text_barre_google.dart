@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TextSignup extends StatelessWidget {
-  const TextSignup({super.key});
+class TextBarreGoogle extends StatelessWidget {
+  const TextBarreGoogle({super.key});
 
   @override
   Widget build(BuildContext context) {
