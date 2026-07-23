@@ -3,6 +3,7 @@ import 'package:login_ui/features/loginpage/widgets/formValidation.dart';
 import 'package:login_ui/features/loginpage/widgets/submitted_button.dart';
 import 'package:login_ui/features/loginpage/widgets/submitted_email_button.dart';
 import 'package:login_ui/features/loginpage/widgets/text_signup.dart';
+import 'package:login_ui/features/loginpage/widgets/textsignup.dart';
 import 'package:login_ui/features/loginpage/widgets/title.dart';
 
 class Maindesign extends StatefulWidget {
@@ -34,6 +35,8 @@ class _Home extends State<Maindesign> {
                 TextSignup(),
                 SizedBox(height: 30),
                 SubmittedEmailButton(),
+                SizedBox(height: 30),
+                Textsignup(),
               ],
             ),
           ),
