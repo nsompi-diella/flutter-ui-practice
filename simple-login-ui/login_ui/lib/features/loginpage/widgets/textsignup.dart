@@ -5,6 +5,15 @@ class Textsignup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(onPressed: () {}, child: Text('Create account'));
+    return Align(
+      alignment: Alignment.topCenter,
+      child: TextButton(
+        onPressed: () {},
+        child: Text(
+          'Create account',
+          style: TextStyle(color: Colors.blueAccent, fontSize: 15),
+        ),
+      ),
+    );
   }
 }
