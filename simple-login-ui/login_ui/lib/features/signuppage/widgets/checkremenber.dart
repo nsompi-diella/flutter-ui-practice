@@ -18,14 +18,19 @@ class _Home extends State<Checkremenber> {
       child: Row(
         children: [
           Checkbox(
+            side: BorderSide(color: Colors.grey),
+            activeColor: Colors.blueAccent,
             value: ischeck,
             onChanged: (value) {
               setState(() {
-                ischeck = value ?? false; 
+                ischeck = value ?? false;
               });
             },
           ),
-          Text('Remenber me'),
+          Text(
+            'Remenber me',
+            style: TextStyle(color: Colors.grey, fontSize: 14),
+          ),
         ],
       ),
     );
