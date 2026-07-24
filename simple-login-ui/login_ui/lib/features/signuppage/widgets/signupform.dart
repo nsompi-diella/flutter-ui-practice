@@ -22,7 +22,7 @@ class _Home extends State<Signupform> {
               TextFormField(
                 validator: Validationform.email,
                 cursorColor: Colors.black,
-
+                keyboardType: TextInputType.name,
                 decoration: InputDecoration(
                   suffixIcon: Padding(
                     padding: EdgeInsets.only(right: 30),
@@ -51,6 +51,7 @@ class _Home extends State<Signupform> {
               ),
               SizedBox(height: 30),
               TextFormField(
+                keyboardType: TextInputType.emailAddress,
                 validator: Validationform.email,
                 cursorColor: Colors.black,
                 decoration: InputDecoration(
@@ -81,7 +82,6 @@ class _Home extends State<Signupform> {
               ),
               SizedBox(height: 30),
               TextFormField(
-                validator: Validationform.email,
                 cursorColor: Colors.black,
                 decoration: InputDecoration(
                   suffixIcon: Padding(
