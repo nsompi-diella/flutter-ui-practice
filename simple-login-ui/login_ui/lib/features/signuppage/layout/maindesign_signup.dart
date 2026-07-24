@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_ui/features/loginpage/widgets/submitted_email_button.dart';
 import 'package:login_ui/features/loginpage/widgets/text_barre_google.dart';
 import 'package:login_ui/features/signuppage/widgets/checkremenber.dart';
+import 'package:login_ui/features/signuppage/widgets/signup_button.dart';
 import 'package:login_ui/features/signuppage/widgets/signupform.dart';
 import 'package:login_ui/features/signuppage/widgets/title_signup.dart';
 
@@ -30,6 +31,8 @@ class _Home extends State<MaindesignSignup> {
                 Signupform(),
                 SizedBox(height: 15),
                 Checkremenber(),
+                SizedBox(height: 15),
+                SignupButton(),
                 SizedBox(height: 15),
                 TextBarreGoogle(),
                 SizedBox(height: 30),
