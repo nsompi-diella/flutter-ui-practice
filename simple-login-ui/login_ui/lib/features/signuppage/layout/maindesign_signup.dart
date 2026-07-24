@@ -19,6 +19,7 @@ class _Home extends State<MaindesignSignup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
