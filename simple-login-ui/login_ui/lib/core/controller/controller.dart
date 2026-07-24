@@ -5,3 +5,4 @@ class Controller {
   final emailCtrl = TextEditingController();
   final passwordCtrl = TextEditingController();
 }
+  
