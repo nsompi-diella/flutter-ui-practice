@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui/core/controller/controller.dart';
 import 'package:login_ui/core/validation/validationform.dart';
 
 class Formvalidation extends StatefulWidget {
-  const Formvalidation({super.key});
+  final Controller controller; 
+  const Formvalidation({super.key,required this.controller});
 
   @override
   State<StatefulWidget> createState() {
     return _Home();
   }
 }
-
 
 class _Home extends State<Formvalidation> {
   @override
@@ -22,6 +23,7 @@ class _Home extends State<Formvalidation> {
         SizedBox(
           width: 350,
           child: TextFormField(
+            controller: widget.controller.emailCtrl,
             validator: Validationform.email,
             cursorColor: Colors.black,
             decoration: InputDecoration(
@@ -39,7 +41,7 @@ class _Home extends State<Formvalidation> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide(color: Colors.grey.shade400),
-              ), 
+              ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide(color: Colors.grey.shade400),
@@ -73,6 +75,7 @@ class _Home extends State<Formvalidation> {
         SizedBox(
           width: 350,
           child: TextFormField(
+            controller: widget.controller.passwordCtrl,
             validator: Validationform.password,
             cursorColor: Colors.grey,
             decoration: InputDecoration(

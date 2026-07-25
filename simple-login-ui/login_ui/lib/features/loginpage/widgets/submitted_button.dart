@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
 class SubmittedButton extends StatefulWidget {
-  const SubmittedButton({super.key});
+  final bool isloading;
+  final VoidCallback onpressed;
+  const SubmittedButton({
+    super.key,
+    required this.isloading,
+    required this.onpressed,
+  });
 
   @override
   State<SubmittedButton> createState() {
-    // TODO: implement createState
     return _Home();
   }
 }
@@ -20,11 +25,23 @@ class _Home extends State<SubmittedButton> {
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.blueAccent.shade700,
         ),
-        onPressed: () {},
-        child: Text(
-          'Login',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-        ),
+        onPressed: widget.isloading ? null : widget.onpressed,
+        child: widget.isloading
+            ? const SizedBox(
+                width: 24,
+                height: 24,
+                child: CircularProgressIndicator(
+                  color: Colors.white,
+                  strokeWidth: 3,
+                ),
+              )
+            : const Text(
+                'Login',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
       ),
     );
   }
