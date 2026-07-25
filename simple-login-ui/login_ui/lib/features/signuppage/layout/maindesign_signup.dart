@@ -42,13 +42,14 @@ class _Home extends State<MaindesignSignup> {
     // simulate duration
     await Future.delayed(Duration(seconds: 2));
 
-    // couper le isloading
-    if (!mounted) return;
-
     // vider input
+
     controller.usernameCtrl.clear();
     controller.emailCtrl.clear();
     controller.passwordCtrl.clear();
+
+    // couper le isloading
+    if (!mounted) return;
 
     // mettre le isloading a false
     setState(() {
