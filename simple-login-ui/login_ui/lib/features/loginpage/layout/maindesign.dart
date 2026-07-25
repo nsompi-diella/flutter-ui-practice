@@ -39,8 +39,8 @@ class _Home extends State<Maindesign> {
       return;
     }
     // recupere les valeur
-    final email = controller.emailCtrl.text;
-    final password = controller.passwordCtrl.text;
+    // final email = controller.emailCtrl.text;
+    // final password = controller.passwordCtrl.text;
     
   
 
