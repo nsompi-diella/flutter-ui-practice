@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui/core/controller/controller.dart';
 import 'package:login_ui/core/validation/validationform.dart';
 
 class Signupform extends StatefulWidget {
-  const Signupform({super.key});
+  final Controller controller;
+  const Signupform({super.key, required this.controller});
 
   @override
   State<StatefulWidget> createState() {
@@ -20,7 +22,8 @@ class _Home extends State<Signupform> {
           child: Column(
             children: [
               TextFormField(
-                validator: Validationform.email,
+                controller: widget.controller.usernameCtrl,
+                validator: Validationform.username,
                 cursorColor: Colors.black,
                 keyboardType: TextInputType.name,
                 decoration: InputDecoration(
@@ -51,6 +54,7 @@ class _Home extends State<Signupform> {
               ),
               SizedBox(height: 30),
               TextFormField(
+                controller: widget.controller.emailCtrl,
                 keyboardType: TextInputType.emailAddress,
                 validator: Validationform.email,
                 cursorColor: Colors.black,
@@ -82,6 +86,9 @@ class _Home extends State<Signupform> {
               ),
               SizedBox(height: 30),
               TextFormField(
+                validator: Validationform.password,
+                controller: widget.controller.passwordCtrl,
+                keyboardType: TextInputType.visiblePassword,
                 cursorColor: Colors.black,
                 decoration: InputDecoration(
                   suffixIcon: Padding(

@@ -4,7 +4,7 @@ class Validationform {
       return 'required field';
     }
     //  entre simple regular expression of email
-    final regexEmail = RegExp(r'^[a-zA-Z ]+$');
+    final regexEmail = RegExp(r'^[a-zA-Z  @.]+$');
     if (!regexEmail.hasMatch(value)) {
       return 'invalid email';
     }
@@ -17,7 +17,7 @@ class Validationform {
     }
 
     //  entre simple regular expression of password
-    final regexPassword = RegExp(r'^[a-zA-Z ]+$');
+    final regexPassword = RegExp(r'^[a-zA-Z-0-9 @.-]+$');
     if (!regexPassword.hasMatch(value)) {
       return 'invalid email';
     }
