@@ -8,5 +8,6 @@ class Controller {
   void dispose() {
     emailCtrl.dispose();
     passwordCtrl.dispose();
+    usernameCtrl.dispose();
   }
 }
