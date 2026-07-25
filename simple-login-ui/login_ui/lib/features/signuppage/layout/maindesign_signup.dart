@@ -1,5 +1,3 @@
-import 'dart:isolate';
-
 import 'package:flutter/material.dart';
 import 'package:login_ui/core/controller/controller.dart';
 import 'package:login_ui/features/loginpage/widgets/submitted_email_button.dart';
@@ -31,9 +29,9 @@ class _Home extends State<MaindesignSignup> {
     }
 
     // recupere les valeur
-    final username = controller.usernameCtrl.text;
-    final email = controller.emailCtrl.text;
-    final password = controller.passwordCtrl.text;
+    // final username = controller.usernameCtrl.text;
+    // final email = controller.emailCtrl.text;
+    // final password = controller.passwordCtrl.text;
 
     setState(() {
       isloading = true;
@@ -72,7 +70,7 @@ class _Home extends State<MaindesignSignup> {
           child: Form(
             key: _formKey,
             child: Container(
-              margin: EdgeInsets.only(top: 100, left: 40, right: 10),
+              margin: EdgeInsets.only(top: 15, left: 40, right: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
