@@ -8,6 +8,9 @@ class Maindesign extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue.shade900,
+        leading: Padding(padding: EdgeInsets.all(8.0),child:
+        Image.asset('assets/image/official_ecg_logo.jpg',fit:BoxFit.contain,),),
+        // title of the page
         title: Text('Home', style: TextStyle(color: Colors.white)),
         actions: [
           IconButton(
