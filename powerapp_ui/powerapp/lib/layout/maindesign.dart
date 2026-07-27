@@ -8,6 +8,7 @@ class Maindesign extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final title = ['Home', 'Meters', 'Transactions', 'Wallets'];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue.shade900,
@@ -18,8 +19,12 @@ class Maindesign extends StatelessWidget {
             fit: BoxFit.contain,
           ),
         ),
-        // title of the page
-        title: Text('Home', style: TextStyle(color: Colors.white)),
+
+        // automation update title in each main pages
+        title: Text(
+          title[navigationShell.currentIndex],
+          style: TextStyle(color: Colors.white, fontSize: 18),
+        ),
         actions: [
           IconButton(
             iconSize: 25,
@@ -46,11 +51,14 @@ class Maindesign extends StatelessWidget {
       // add navigationshell in body to represent every pages
       body: navigationShell,
       bottomNavigationBar: BottomNavigationBar(
+        // --------------- LOGIQUE PART ----------
         // add currentindex
         currentIndex: navigationShell.currentIndex,
         onTap: (index) {
           navigationShell.goBranch(index);
         },
+
+        // ------------------ DESIGN PART ----------------
 
         // add type to fixe icon and label
         type: BottomNavigationBarType.fixed,
@@ -64,11 +72,11 @@ class Maindesign extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.grid_view_outlined),
-            label: 'Meter',
+            label: 'Meters',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bar_chart_outlined),
-            label: 'Transaction',
+            label: 'Transactions',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_balance_wallet_outlined),
