@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Maindesign extends StatelessWidget {
-  const Maindesign({super.key});
+  // add navigationshell route for the path of my project
+  final StatefulNavigationShell navigationShell;
+  const Maindesign({super.key, required this.navigationShell});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +43,15 @@ class Maindesign extends StatelessWidget {
           ),
         ],
       ),
+      // add navigationshell in body to represent every pages
+      body: navigationShell,
       bottomNavigationBar: BottomNavigationBar(
+        // add currentindex
+        currentIndex: navigationShell.currentIndex,
+        onTap: (index) {
+          navigationShell.goBranch(index);
+        },
+
         // add type to fixe icon and label
         type: BottomNavigationBarType.fixed,
         unselectedItemColor: Colors.grey,

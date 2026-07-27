@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:powerapp/layout/maindesign.dart';
+import 'package:powerapp/router/approute.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -7,11 +8,10 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home:Maindesign(),
+    return MaterialApp.router(
+      routerConfig:approute,
       debugShowCheckedModeBanner: false,
     );
   }
